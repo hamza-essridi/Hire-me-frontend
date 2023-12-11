@@ -16,13 +16,13 @@ function FeaturedPost(props) {
         <Card sx={{ display: 'flex' }}>
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">
-              {post.title}
+              {post.firstName}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary">
-              {post.date}
+              {post.lastName}
             </Typography>
             <Typography variant="subtitle1" paragraph>
-              {post.description}
+              {post.emailId}
             </Typography>
             <Typography variant="subtitle1" color="primary">
               Continue reading...

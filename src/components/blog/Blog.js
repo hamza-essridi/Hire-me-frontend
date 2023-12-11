@@ -126,6 +126,7 @@ function Blog() {
       // Call the fetchData function
       fetchData();
     }, []);
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -134,8 +135,11 @@ function Blog() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
+            {/* {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
+            ))} */}
+            {data && data.map((post) => (
+              <FeaturedPost key={post.id} post={post} />
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
